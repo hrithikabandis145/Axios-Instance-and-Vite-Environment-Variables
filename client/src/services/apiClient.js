@@ -9,24 +9,20 @@
 //        Accept:         "application/json"
 //   • export the instance as the default export.
 //
-// import axios from "axios";
+ import axios from "axios";
 //
-// const apiClient = axios.create({
-//   // ...your config here...
-// });
+ const apiClient = axios.create({
+   // ...your config here...
+   baseURL: import.meta.env.VITE_API_URL,
+   headers:{
+    "Content-Type": "application/json",
+    Accept: "application/json",
+   },
+ });
 //
-// export default apiClient;
+ export default apiClient;
 // ─────────────────────────────────────────────────────────────
 
 // Placeholder so the app runs before you implement this.
 // Replace EVERYTHING below with your axios.create() instance.
-const apiClient = {
-  get() {
-    throw new Error("NOT_IMPLEMENTED");
-  },
-  post() {
-    throw new Error("NOT_IMPLEMENTED");
-  },
-};
 
-export default apiClient;
